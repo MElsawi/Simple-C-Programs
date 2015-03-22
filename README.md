@@ -56,8 +56,10 @@ int main(void)
  
     if (num == 1) 
     {
-        printf("\n\nA growl starts to echo throughout the maze, you can feel as a great beast was gaining on to you\n");
+        printf("\n\nA growl starts to echo throughout the maze, you can feel as a great beast was gaining\n");
+        printf("on to you\n");
     }
+    
  
     else 
     {
