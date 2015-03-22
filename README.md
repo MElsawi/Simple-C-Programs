@@ -5,7 +5,12 @@
 
     
     
-    int num; x xx
+    
+    
+    include<stdio.h>
+    int main()
+    {
+    int num; 
  
     printf("\n\nWelcome to the maze of destruction, beware of the choices you make.\n");
     printf("\nTo enter the maze press 1\n");
