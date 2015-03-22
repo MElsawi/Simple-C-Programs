@@ -1,10 +1,3 @@
-# Simple-C-Programs
-====================
-
-Simple C text game. 
-
-
-
 
 
 
