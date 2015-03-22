@@ -5,6 +5,9 @@ Simple C text game.
 
 
 
+
+
+
 #include <stdio.h>
 int main(void)
 {
