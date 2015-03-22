@@ -8,6 +8,8 @@ Simple C text game.
 #include <stdio.h>
 int main(void)
 {
+    
+    
     int num;
  
     printf("\n\nWelcome to the maze of destruction, beware of the choices you make.\n");
