@@ -1,0 +1,94 @@
+#include <stdio.h>
+int main(void)
+
+{
+
+        int digitNumber = 0;
+        int number = 0;
+        int decimalValue = 0;
+        char garabage, Hexadecimal;
+
+        //prints title of the lab to the user
+
+        printf("+-----------------------+\n| HEXADECIMAL CONVERTER |\n+-----------------------+\n");
+
+        digitNumber = 0;
+                                                       
+        //Asks the user to input a hexidecimal number for conversion
+       
+        printf("\nEnter hexadecimal number ==> ");
+        scanf("%c" , &Hexadecimal);
+
+        number = 0;
+
+        if (Hexadecimal == '\n') 
+
+        {
+
+        //An error that alerts the user if he doesn't input something.
+        printf("***Uh oh! You need to input something here\n\n");
+
+        return 0;
+
+        }
+ 
+        //This makes sure that only 0-9 and a-f is entered
+        while (Hexadecimal != '\n')
+
+        {
+
+        if(Hexadecimal >= 'a' && Hexadecimal <= 'f')
+
+          number = Hexadecimal - 'a' + 10;
+          
+          else if
+          (Hexadecimal >= 'A' && Hexadecimal <= 'F')
+
+          number = Hexadecimal - 'A' + 10; 
+          
+          else if
+          (Hexadecimal >= '0' && Hexadecimal <= '9') 
+
+          number = Hexadecimal - '0';
+
+        else{ 
+
+        //Error which occurs to let the user know that a character not hexadecimal was entered.
+
+        printf("***Uh oh, you've entered invalid character(s)\n");
+
+        return 0;
+
+        }
+        //Calculations, this converts the hexadecimal value to decimal
+        decimalValue = decimalValue * 16 + number;
+
+        digitNumber++;
+
+        scanf("%c" , &Hexadecimal);
+
+        }
+
+        if (digitNumber > 6)
+
+        {
+
+        //Error that appears when the user enteres more than the required characters
+        printf("***Uh oh! the number of characters entered is not valid\n");
+
+        return 1;
+        }
+
+        else
+
+        {
+
+        //Displays what the decimal number is to the user after the conversion
+        printf("\nDecimal number is %d\n", decimalValue);
+
+        }
+
+
+        return 0;
+
+        }
