@@ -1,0 +1,83 @@
+#include <stdio.h>
+
+void drawRectangle(char column, char row, char corner, char rectangleSpace, int width, int height);
+void drawLine(char side, char middle, int width);
+
+int main(void)
+{
+
+//Here when function drawRectangle gets called, each character is placed according to order the in the function prototype.
+
+
+        drawRectangle('|','-','+',' ',5,2);
+        printf("\n");
+        drawRectangle(':','=','*',' ',7,3);
+        printf("\n");
+        drawRectangle('#','~','o',' ',3,5);
+        printf("\n");
+        drawRectangle('#','#','#','#',2,4);
+        printf("\n");
+        drawRectangle('I','I','X',' ',2,2);
+        printf("\n");
+        drawRectangle('@','@','@',' ',1,1);
+        printf("\n");
+
+//Why does the function get called six times? To construct each rectangle with its own form made by the drawRectangle function.
+
+        return 0;
+}
+
+/*
+function    :drawRectangle
+purpose     :Gets rectangle printed using given characters.
+parameter 1 :Columns of the rectangle column(char) 
+parameter 2 :Rows of the rectangle row(char)   
+parameter 3 :Character at the corner of the rectangle corner(char)
+parameter 4 :Empty space within the rectangle rectangleSpace(char)
+parameter 5 :width of rectangle width(int)
+parameter 6 :height of rectangle height(int)
+return      :void
+*/
+
+void drawRectangle(char column, char row, char corner, char rectangleSpace, int width, int height)
+{
+
+     
+        int x;
+
+        drawLine(corner, row, width);
+
+        for(x = 1; x<=height; x++)
+
+        drawLine(column, rectangleSpace,width);
+
+        drawLine(corner, row, width);
+
+//Why does the drawLine function get called? Its what you need to display the lines, with the given characters.
+  
+}
+
+/*
+function    :drawLine
+purpose     :Displays the lines of the rectangle.
+parameter 1 :Side of the rectangle. side(char)
+parameter 2 :Middle of the rectangle. middle(char)
+parameter 3 :Width of the rectangle. width(char)
+return      :void
+*/
+
+void drawLine(char side, char middle, int width)
+{
+
+        int x;
+
+        putchar(side);
+
+        for(x = 1; x <= width; x++)
+
+        putchar(middle);
+
+        putchar(side);
+
+        printf("\n");
+}
